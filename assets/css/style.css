@@ -1,3 +1,14 @@
+@media (max-width: 900px) {
+  .header .logo h1 {
+    font-size: 17px;
+  }
+
+  .header .logo img {
+    max-height: 30px;
+    margin-right: 8px;
+  }
+}
+
 /* Our Process Section */
 .process-section {
   color: #fff;
@@ -205,88 +216,88 @@
 }
 
 .pricing-note-section {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 
 .note-card {
   background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
-    border-left: 1px solid #e5e7eb;
-    padding: 28px;
-    margin: auto;
+  border-left: 1px solid #e5e7eb;
+  padding: 28px;
+  margin: auto;
 }
 
 .note-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
 .note-header i {
-    color: var(--accent-color);
-    font-size: 22px;
+  color: var(--accent-color);
+  font-size: 22px;
 }
 
 .note-header h4 {
-    margin: 0;
-    font-weight: 600;
+  margin: 0;
+  font-weight: 600;
 }
 
 .note-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .note-list li {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 12px;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    font-size: 15px;
-    line-height: 1.6;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 .note-list i {
-    color: var(--accent-color);
-    font-size: 18px;
-    margin-top: 2px;
+  color: var(--accent-color);
+  font-size: 18px;
+  margin-top: 2px;
 }
 
 .note-footer {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px dashed #d1d5db;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px dashed #d1d5db;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
 }
 
 .note-footer i {
-    color: #ba1212;
-    font-size: 19px;
+  color: #ba1212;
+  font-size: 19px;
 }
 
 .note-footer p {
-    margin: 0;
-    font-size: 15px;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin: 0;
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
 /* Mobile Optimization */
 @media (max-width: 576px) {
-    .note-card {
-        padding: 20px;
-    }
+  .note-card {
+    padding: 20px;
+  }
 
-    .note-header h4 {
-        font-size: 18px;
-    }
+  .note-header h4 {
+    font-size: 18px;
+  }
 
-    .note-list li,
-    .note-footer p {
-        font-size: 14px;
-    }
+  .note-list li,
+  .note-footer p {
+    font-size: 14px;
+  }
 }
 
 
@@ -302,7 +313,7 @@
   background: color-mix(in srgb, var(--accent-color), transparent 96%);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
   transition: all .3s ease;
   height: 100%;
 }
@@ -357,7 +368,7 @@
 
 /* Title */
 .demo-title {
-    padding: 20px 18px;
+  padding: 20px 18px;
 }
 
 .demo-title h4 {
