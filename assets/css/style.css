@@ -9,6 +9,23 @@
   }
 }
 
+.modal-content {
+  backdrop-filter: blur(16px);
+  background-color: #ffffff61;
+  border: 1px solid #fff;
+}
+
+.modal-content .form-label {
+    color: #fff;
+    margin-bottom: .5rem;
+}
+
+.btn-close:focus {
+    outline: 0;
+    box-shadow: unset;
+    opacity: var(--bs-btn-close-focus-opacity);
+}
+
 /* Our Process Section */
 .process-section {
   color: #fff;

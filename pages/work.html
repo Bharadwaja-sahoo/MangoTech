@@ -78,7 +78,7 @@
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <a class="btn-getstarted" href="index.html#about">Get Started</a>
+            <a class="btn-getstarted" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#contactModal">Get Started</a>
         </div>
     </header>
     <main class="main">
@@ -223,6 +223,7 @@
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-about">
                     <a href="../index.html" class="logo d-flex align-items-center">
+                        <img src="../assets/images/icon.png" alt="">
                         <span class="sitename">MangoTech</span>
                         <span>.</span>
                     </a>
@@ -241,22 +242,23 @@
                 <div class="col-lg-2 col-6 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Terms of service</a></li>
-                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./pages/about_us.html">About Us</a></li>
+                        <li><a href="./pages/services.html">Services</a></li>
+                        <li><a href="./pages/pricing.html">Pricing</a></li>
+                        <li><a href="./pages/work.html">Work & Projects</a></li>
+                        <li><a href="./pages/contact_us.html">Contact Us</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">Product Management</a></li>
-                        <li><a href="#">Marketing</a></li>
-                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="javascript:void(0);">Web Design</a></li>
+                        <li><a href="javascript:void(0);">Web Development</a></li>
+                        <li><a href="javascript:void(0);">Product Management</a></li>
+                        <li><a href="javascript:void(0);">Marketing</a></li>
+                        <li><a href="javascript:void(0);">Graphic Design</a></li>
                     </ul>
                 </div>
 
@@ -278,9 +280,85 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="contactLabel">Inquiry Form</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <form method="post" id="contactForm" class="contact-form">
+                        <div class="row gy-3">
+                            <!-- First Name -->
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" id="firstName" name="first_name" class="form-control"
+                                    placeholder="Enter first name" required>
+                            </div>
+
+                            <!-- Last Name -->
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" id="lastName" name="last_name" class="form-control"
+                                    placeholder="Enter last name">
+                            </div>
+
+                            <!-- Email -->
+                            <div class="col-md-12">
+                                <label for="email" class="form-label">Email ID</label>
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="example@gmail.com" onblur="validateEmail()" style="text-transform: lowercase;">
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="col-md-12">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control"
+                                    placeholder="+91 987*******" maxlength="10" onblur="validatePhone()" onkeypress="return onlyNumber(event)">
+                            </div>
+
+                            <!-- Address -->
+                            <div class="col-md-12">
+                                <label for="address" class="form-label">Address</label>
+                                <textarea id="address" name="address" class="form-control" rows="2"
+                                    placeholder="Your address" required
+                                    style="min-height: 70px; max-height: 70px;"></textarea>
+                            </div>
+
+                            <!-- Join Type -->
+                            <div class="col-md-12">
+                                <label for="joinType" class="form-label">Interested In</label>
+                                <select id="joinType" name="join_type" class="form-control" required>
+                                    <option value="" disabled selected>Choose an option</option>
+                                    <option value="nano">Nano Plan</option>
+                                    <option value="basic">Basic Plan</option>
+                                    <option value="pro">Pro Plan</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="submitInquiry()">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Scroll Top -->
-    <a href="javascript:void(0)" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="javascript:void(0)" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
 
     <!-- Vendor JS Files -->
     <script src="../assets/file/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -290,6 +368,7 @@
     <script src="../assets/file/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="../assets/file/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="../assets/file/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Main JS File -->
     <script src="../assets/js/main.js"></script>

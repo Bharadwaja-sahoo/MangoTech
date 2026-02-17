@@ -4823,3 +4823,46 @@ section,
     grid-template-columns: 1fr;
   }
 }
+
+#toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast {
+  background: #fff;
+  border-left: 5px solid;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  animation: slideIn .4s ease;
+}
+
+.toast.success { border-color: #28a745; }
+.toast.error   { border-color: #dc3545; }
+.toast.info    { border-color: #0d6efd; }
+
+.toast svg {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+.toast span {
+  font-weight: 600;
+}
+
+.toast p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
